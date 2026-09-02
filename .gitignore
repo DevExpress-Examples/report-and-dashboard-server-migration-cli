@@ -1,0 +1,145 @@
+### C#
+# Build results
+[Bb]in/
+[Oo]bj/
+
+# Visual Studio cache/options directory
+.vs/
+
+# User-specific files
+*.suo
+*.user
+
+# Debug symbols
+*.pdb
+
+# NuGet Packages
+*.nupkg
+**/[Pp]ackages/*
+!**/[Pp]ackages/build/
+
+# .NET build artifacts
+artifacts/
+
+# Publish output
+publish/
+
+### Node
+# Dependencies
+node_modules/
+
+# Logs
+*.log
+
+# Runtime data
+*.pid
+*.pid.lock
+
+# Coverage
+coverage/
+*.lcov
+.nyc_output
+
+# Build output
+dist/
+build/Release
+
+# TypeScript cache
+*.tsbuildinfo
+
+# Framework build output and caches
+.cache
+.parcel-cache
+.next
+out/
+.nuxt
+
+# dotenv environment variable files
+.env
+.env.local
+.env.*.local
+
+# npm cache directory
+.npm
+*.tgz
+
+# yarn v2
+.yarn/cache
+.yarn/unplugged
+.yarn/install-state.gz
+.pnp.*
+
+### Windows
+# Windows thumbnail cache files
+Thumbs.db
+
+# Folder config file
+[Dd]esktop.ini
+
+# Recycle Bin used on file shares
+$RECYCLE.BIN/
+
+# Windows shortcuts
+*.lnk
+
+### VisualStudio
+# User-specific files
+*.suo
+*.user
+
+# Build results
+[Dd]ebug/
+[Rr]elease/
+x64/
+x86/
+[Ww][Ii][Nn]32/
+[Aa][Rr][Mm]/
+[Aa][Rr][Mm]64/
+[Bb]in/
+[Oo]bj/
+
+# Visual Studio cache/options directory
+.vs/
+
+# MSTest test Results
+[Tt]est[Rr]esult*/
+[Bb]uild[Ll]og.*
+
+# NuGet
+*.nupkg
+**/[Pp]ackages/*
+!**/[Pp]ackages/build/
+*.nuget.props
+*.nuget.targets
+
+# Publish Web Output
+*.[Pp]ublish.xml
+aspnetcore-report-dashboard-sample-app/Dashboards
+aspnetcore-report-dashboard-sample-app/wwwroot/xtrareportsjs
+aspnetcore-report-dashboard-sample-app/wwwroot/Content
+aspnetcore-report-dashboard-sample-app/wwwroot/favicon.ico
+aspnetcore-report-dashboard-sample-app/wwwroot/css/dx.richedit.css
+aspnetcore-report-dashboard-sample-app/wwwroot/css/dx.light.css
+aspnetcore-report-dashboard-sample-app/wwwroot/css/bundle.thirdparty.css
+aspnetcore-report-dashboard-sample-app/wwwroot/css/bundle.reporting.css
+aspnetcore-report-dashboard-sample-app/wwwroot/css/bundle.dashboard.css
+aspnetcore-report-dashboard-sample-app/wwwroot/css/bootstrap.min.css
+aspnetcore-report-dashboard-sample-app/wwwroot/css/ace.css
+aspnetcore-report-dashboard-sample-app/wwwroot/css/theme
+aspnetcore-report-dashboard-sample-app/wwwroot/css/icons
+aspnetcore-report-dashboard-sample-app/wwwroot/css/fonts
+aspnetcore-report-dashboard-sample-app/wwwroot/js/bootstrap.bundle.min.js
+aspnetcore-report-dashboard-sample-app/wwwroot/js/bundle.dashboard.js
+aspnetcore-report-dashboard-sample-app/wwwroot/js/bundle.reporting.js
+aspnetcore-report-dashboard-sample-app/wwwroot/js/bundle.thirdparty.js
+aspnetcore-report-dashboard-sample-app/wwwroot/js/dx.all.js
+aspnetcore-report-dashboard-sample-app/wwwroot/js/dx.richedit.min.js
+aspnetcore-report-dashboard-sample-app/wwwroot/js/dx-dashboard.min.js
+aspnetcore-report-dashboard-sample-app/wwwroot/js/jquery.min.js
+aspnetcore-report-dashboard-sample-app/wwwroot/js/jszip.min.js
+aspnetcore-report-dashboard-sample-app/wwwroot/js/knockout.js
+aspnetcore-report-dashboard-sample-app/wwwroot/js/ace
+aspnetcore-report-dashboard-sample-app/wwwroot/css/dashboard
+aspnetcore-report-dashboard-sample-app/DataModels
+aspnetcore-report-dashboard-sample-app/Reports
+aspnetcore-report-dashboard-sample-app/package-lock.json

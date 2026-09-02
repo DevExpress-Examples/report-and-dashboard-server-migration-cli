@@ -1,0 +1,58 @@
+@{
+    ViewData["Title"] = "Report Viewer";
+    ViewData["FullWidth"] = true;
+}
+
+@using DevExpress.AspNetCore
+@inject DevExpress.XtraReports.Web.Extensions.ReportStorageWebExtension ReportStorage
+
+@{
+    var reports = ReportStorage.GetUrls().Keys.ToList();
+    var firstReport = reports.FirstOrDefault() ?? string.Empty;
+}
+
+<script>
+    var viewer = null;
+    function onReportChanged() {
+        var selectedReport = document.getElementById("reportSelector").value;
+        if (viewer) {
+            viewer.OpenReport(selectedReport);
+        }
+    }    
+    function onBeforeRender(s, e) {
+        viewer = s;
+    }
+</script>
+
+<div class="viewer-page">
+    <div class="viewer-toolbar">
+        @if (reports.Count == 0)
+        {
+            <span class="text-muted small">
+                No reports available. Run <strong>rds-data-export-cli-tool</strong> with the
+                <code>--integrate</code> option to populate the Reports folder.
+            </span>
+        }
+        else
+        {
+            <label for="reportSelector">Report:</label>
+            <select id="reportSelector" class="form-select form-select-sm" style="width: 280px;"
+                    onchange="onReportChanged()">
+                @foreach (var rep in reports)
+                {
+                    <option value="@rep">@rep</option>
+                }
+            </select>
+        }
+    </div>
+
+    <div class="viewer-content">
+        @(Html.DevExpress().WebDocumentViewer("webDocumentViewer")
+            .Height("100%")
+            .ClientSideEvents(events => {
+                events.BeforeRender("onBeforeRender");
+            })
+            .Bind(firstReport)
+        )
+    </div>
+</div>

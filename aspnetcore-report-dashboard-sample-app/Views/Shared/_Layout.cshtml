@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="DevExpress Reports and Dashboards — view, design, and analyze reports and interactive dashboards." />
+    <title>@ViewData["Title"] - DevExpress Reports &amp; Dashboards</title>
+    <script type="importmap"></script>
+    <link rel="stylesheet" href="~/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+
+    <link href="~/css/bundle.thirdparty.css" rel="stylesheet" asp-append-version="true" />
+    <link href="~/css/bundle.reporting.css" rel="stylesheet" asp-append-version="true" />
+    <link href="~/css/bundle.dashboard.css" rel="stylesheet" asp-append-version="true" />
+
+    <script src="~/js/jquery.min.js"></script>
+    <script src="~/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    <script src="~/js/bundle.thirdparty.js" asp-append-version="true"></script>
+    <script src="~/js/bundle.reporting.js" asp-append-version="true"></script>
+    <script src="~/js/bundle.dashboard.js" asp-append-version="true"></script>
+</head>
+<body>
+    <header class="layout-header">
+        @{
+            var currentAction = ViewContext.RouteData.Values["action"]?.ToString();
+        }
+        <nav class="navbar navbar-expand-sm navbar-dark app-navbar">
+            <div class="container-fluid px-3">
+                <a class="navbar-brand app-brand" asp-area="" asp-controller="Home" asp-action="Index">
+                    <svg class="app-brand-icon" width="22" height="22" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                    DevExpress Reports &amp; Dashboards
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse"
+                        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="navbar-collapse collapse">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item">
+                            <a id="nav-home" class="nav-link @(currentAction == "Index" ? "active" : "")"
+                               asp-area="" asp-controller="Home" asp-action="Index">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a id="nav-reports" class="nav-link @(currentAction == "ReportViewer" ? "active" : "")"
+                               asp-area="" asp-controller="Home" asp-action="ReportViewer">Report Viewer</a>
+                        </li>
+                        <li class="nav-item">
+                            <a id="nav-designer" class="nav-link @(currentAction == "ReportDesigner" ? "active" : "")"
+                               asp-area="" asp-controller="Home" asp-action="ReportDesigner">Report Designer</a>
+                        </li>
+                        <li class="nav-item">
+                            <a id="nav-dashboards" class="nav-link @(currentAction == "Dashboards" ? "active" : "")"
+                               asp-area="" asp-controller="Home" asp-action="Dashboards">Dashboards</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    @if (ViewData["FullWidth"] as bool? == true)
+    {
+        <div class="app-main-fullwidth">
+            @RenderBody()
+        </div>
+    }
+    else
+    {
+        <div class="container py-4">
+            <main role="main" class="main">
+                @RenderBody()
+            </main>
+        </div>
+
+        <footer class="app-footer">
+            <div class="container d-flex justify-content-between align-items-center">
+                <span>&copy; @DateTime.Now.Year DevExpress Reports &amp; Dashboards</span>                
+            </div>
+        </footer>
+    }
+
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>

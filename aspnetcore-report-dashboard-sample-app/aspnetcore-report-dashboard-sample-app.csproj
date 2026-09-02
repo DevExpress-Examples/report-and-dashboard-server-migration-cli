@@ -1,0 +1,28 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net10.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="BuildBundlerMinifier" Version="3.2.449" />
+    <PackageReference Include="DevExpress.AspNetCore.Dashboard" Version="25.2.*" />
+    <PackageReference Include="DevExpress.AspNetCore.Reporting" Version="25.2.*" />
+    <PackageReference Include="DevExpress.Drawing.Skia" Version="25.2.*" />
+    <PackageReference Include="DevExpress.Pdf.SkiaRenderer" Version="25.2.*" />
+    <PackageReference Include="Microsoft.Data.SqlClient" Version="7.0.1" />
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.4" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="Reports/**/*.repx" CopyToOutputDirectory="PreserveNewest" CopyToPublishDirectory="PreserveNewest" />
+    <Content Include="Dashboards/**/*.xml" CopyToOutputDirectory="PreserveNewest" CopyToPublishDirectory="PreserveNewest" />
+  </ItemGroup>
+
+  <Target Name="RestoreClientAssets" BeforeTargets="BeforeBuild" Condition="'$(SkipClientAssetRestore)' != 'true'">
+    <Exec Command="node restore-client-assets.mjs" WorkingDirectory="$(MSBuildProjectDirectory)" />
+  </Target>
+
+</Project>

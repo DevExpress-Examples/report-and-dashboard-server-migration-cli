@@ -1,0 +1,51 @@
+@{
+    ViewData["Title"] = "Home";
+}
+
+<div class="index-hero text-center mb-5">
+    <div class="mb-3">
+        <svg width="48" height="48" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" style="color: #ff6b35;">
+            <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+    </div>
+    <h1 class="display-6 fw-bold mb-3">DevExpress Reports &amp; Dashboards</h1>
+    <p class="lead text-muted mb-0" style="max-width: 560px; margin: 0 auto;">
+        Use this standalone application to preview and modify Reports and BI Dashboards exported from the DevExpress Report and Dashboard Server.
+    </p>
+</div>
+
+<div class="row g-4 justify-content-center">
+    <div class="col-sm-6 col-lg-4">
+        <a href="/Home/ReportViewer" class="text-decoration-none">
+            <div class="feature-card card h-100 p-4">
+                <div class="feature-icon mb-3">📄</div>
+                <h2 class="h5 fw-semibold mb-2">DevExpress Report Viewer</h2>
+                <p class="text-muted small mb-0">
+                    View reports exported from DevExpress Report and Dashboard Server. The viewer supports drill-down, filtering, search, and export to PDF, Excel, and other formats.
+                </p>
+            </div>
+        </a>
+    </div>
+    <div class="col-sm-6 col-lg-4">
+        <a href="/Home/ReportDesigner" class="text-decoration-none">
+            <div class="feature-card card h-100 p-4">
+                <div class="feature-icon mb-3">🎨</div>
+                <h2 class="h5 fw-semibold mb-2">DevExpress Report Designer</h2>
+                <p class="text-muted small mb-0">
+                    Customize reports exported from the DevExpress Report and Dashboard Server.
+                </p>
+            </div>
+        </a>
+    </div>
+    <div class="col-sm-6 col-lg-4">
+        <a href="/Home/Dashboards" class="text-decoration-none">
+            <div class="feature-card card h-100 p-4">
+                <div class="feature-icon mb-3">📊</div>
+                <h2 class="h5 fw-semibold mb-2">DevExpress BI Dashboard</h2>
+                <p class="text-muted small mb-0">
+                    View and customize interactive dashboards exported from the DevExpress Report and Dashboard Server. Enhance data presentation using charts, grids, maps, gauges, and other data visualization items.
+                </p>
+            </div>
+        </a>
+    </div>
+</div>

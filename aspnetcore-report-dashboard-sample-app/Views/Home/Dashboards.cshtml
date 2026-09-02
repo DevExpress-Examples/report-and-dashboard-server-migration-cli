@@ -1,0 +1,23 @@
+@{
+    ViewData["Title"] = "Dashboards";
+    ViewData["FullWidth"] = true;
+}
+@using DevExpress.AspNetCore
+
+<script>
+    function onBeforeRender(sender) {
+        sender.registerExtension?.(new DevExpress.Dashboard.DashboardPanelExtension(sender));
+    }
+</script>
+
+<div class="viewer-page">
+    <div class="viewer-content">
+        @(Html.DevExpress().Dashboard("dashboardControl")
+            .ControllerName("DefaultDashboard")
+            .Width("100%")
+            .Height("100%")
+            .WorkingMode(DevExpress.DashboardWeb.WorkingMode.Viewer)
+            .OnBeforeRender("onBeforeRender")
+        )
+    </div>
+</div>

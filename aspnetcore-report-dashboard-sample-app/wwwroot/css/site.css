@@ -1,0 +1,158 @@
+/* ============================================================
+   DevExpress Reports & Dashboards — Global Site Styles
+   ============================================================ */
+
+/* ── CSS Custom Properties (global — not scoped) ─────────── */
+:root {
+    --navbar-height:   56px;
+    --brand-primary:   #ff6b35;
+    --brand-dark:      #1a1a2e;
+    --brand-darker:    #0f1923;
+    --transition-fast: 0.2s ease;
+    --shadow-md:       0 4px 16px rgba(0, 0, 0, 0.14);
+    --radius-card:     14px;
+}
+
+html {
+    font-size: 14px;
+    height: 100%;
+}
+
+@media (min-width: 768px) {
+    html { font-size: 16px; }
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    margin: 0;
+}
+
+.layout-header {
+    position: absolute;
+    width: 100%;
+}
+
+.container .main {
+    padding-top: 40px;
+}
+
+.viewer-page {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    min-height: 0;
+    overflow: hidden;
+}
+
+.viewer-toolbar {
+    flex-shrink: 0;
+    background: #f8f9fa;
+    border-bottom: 1px solid #dee2e6;
+    padding: 0.5rem 1rem;
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+}
+
+.viewer-toolbar label {
+    font-size: 0.875rem;
+    font-weight: 500;
+    color: #495057;
+    margin: 0;
+    white-space: nowrap;
+}
+
+.viewer-content {
+    flex: 1;
+    min-height: 0;
+    position: relative;
+    overflow: hidden;
+}
+
+/* ── Form floating placeholder ────────────────────────────── */
+
+.form-floating > .form-control-plaintext::placeholder,
+.form-floating > .form-control::placeholder {
+    color: var(--bs-secondary-color);
+    text-align: end;
+}
+
+.form-floating > .form-control-plaintext:focus::placeholder,
+.form-floating > .form-control:focus::placeholder {
+    text-align: start;
+}
+
+/* ── Navbar ───────────────────────────────────────────────── */
+
+.app-navbar {
+    background: linear-gradient(90deg, var(--brand-darker) 0%, var(--brand-dark) 100%);
+    box-shadow: var(--shadow-md);
+    height: var(--navbar-height);
+    position: sticky;
+    top: 0;
+    z-index: 1030;
+}
+
+.app-brand {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 1rem;
+    font-weight: 700;
+    letter-spacing: 0.01em;
+    color: #fff !important;
+}
+
+.app-brand-icon {
+    color: var(--brand-primary);
+    flex-shrink: 0;
+}
+
+.app-navbar .nav-link {
+    color: rgba(255, 255, 255, 0.75) !important;
+    transition: color var(--transition-fast);
+    font-weight: 500;
+}
+
+.app-navbar .nav-link:hover,
+.app-navbar .nav-link.active {
+    color: #fff !important;
+}
+
+.app-navbar .nav-link.active {
+    border-bottom: 2px solid var(--brand-primary);
+}
+
+/* ── Full-width main area (Dashboards / Report Viewer) ────── */
+
+.app-main-fullwidth {
+    position: fixed;
+    top: var(--navbar-height);
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+/* ── Footer ───────────────────────────────────────────────── */
+
+.app-footer {
+    background: var(--brand-darker);
+    color: rgba(255, 255, 255, 0.55);
+    font-size: 0.8rem;
+    padding: 0.75rem 0;
+    margin-top: auto;
+}
+
+.app-footer a {
+    color: rgba(255, 255, 255, 0.55);
+    text-decoration: none;
+}
+
+.app-footer a:hover {
+    color: #fff;
+}

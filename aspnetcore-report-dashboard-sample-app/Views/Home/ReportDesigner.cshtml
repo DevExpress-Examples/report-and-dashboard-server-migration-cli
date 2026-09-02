@@ -1,0 +1,20 @@
+@{
+    ViewData["Title"] = "Report Designer";
+    ViewData["FullWidth"] = true;
+}
+
+@using DevExpress.AspNetCore
+@inject DevExpress.XtraReports.Web.Extensions.ReportStorageWebExtension ReportStorage
+
+@{
+    var firstReport = ReportStorage.GetUrls().Keys.FirstOrDefault() ?? string.Empty;
+}
+
+<div class="viewer-page">
+    <div class="viewer-content">
+        @(Html.DevExpress().ReportDesigner("reportDesigner")
+            .Height("100%")
+            .Bind(firstReport)
+        )
+    </div>
+</div>

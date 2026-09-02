@@ -1,0 +1,75 @@
+[
+  {
+    "outputFileName": "wwwroot/css/bundle.thirdparty.css",
+    "inputFiles": [
+      "wwwroot/css/ace.css",
+      "wwwroot/css/theme/ambiance.css",
+      "wwwroot/css/theme/dreamweaver.css",
+      "wwwroot/css/dx.light.css",
+      "wwwroot/css/dx.richedit.css"
+    ],
+    "minify": {
+      "enabled": false
+    }
+  },
+  {
+    "outputFileName": "wwwroot/css/bundle.reporting.css",
+    "inputFiles": [
+      "wwwroot/xtrareportsjs/css/dx-analytics.common.css",
+      "wwwroot/xtrareportsjs/css/dx-analytics.light.css",
+      "wwwroot/xtrareportsjs/css/dx-webdocumentviewer.css",
+      "wwwroot/xtrareportsjs/css/dx-querybuilder.css",
+      "wwwroot/xtrareportsjs/css/dx-reportdesigner.css"
+    ],
+    "minify": {
+      "enabled": false
+    }
+  },
+  {
+    "outputFileName": "wwwroot/css/bundle.dashboard.css",
+    "inputFiles": [
+      "wwwroot/css/dashboard/dx-dashboard.light.min.css"
+    ],
+    "minify": {
+      "enabled": false
+    }
+  },
+  {
+    "outputFileName": "wwwroot/js/bundle.thirdparty.js",
+    "inputFiles": [
+      "wwwroot/js/knockout.js",
+      "wwwroot/js/ace/ace.js",
+      "wwwroot/js/ace/ext-language_tools.js",
+      "wwwroot/js/ace/snippets/text.js",
+      "wwwroot/js/jszip.min.js",
+      "wwwroot/js/dx.all.js",
+      "wwwroot/js/dx.richedit.min.js"
+    ],
+    "minify": {
+      "enabled": false
+    }
+  },
+  {
+    "outputFileName": "wwwroot/js/bundle.reporting.js",
+    "inputFiles": [
+      "wwwroot/xtrareportsjs/js/dx-analytics-core.min.js",
+      "wwwroot/xtrareportsjs/js/dx-querybuilder.min.js",
+      "wwwroot/xtrareportsjs/js/dx-webdocumentviewer.min.js",
+      "wwwroot/xtrareportsjs/js/dx-reportdesigner.min.js"
+    ],
+    "minify": {
+      "enabled": false
+    }
+  },
+  {
+    "outputFileName": "wwwroot/js/bundle.dashboard.js",
+    "inputFiles": [
+      "wwwroot/Content/d3-funnel/d3.min.js",
+      "wwwroot/Content/d3-funnel/d3-funnel.min.js",
+      "wwwroot/js/dx-dashboard.min.js"
+    ],
+    "minify": {
+      "enabled": false
+    }
+  }
+]
